@@ -18,14 +18,19 @@ Adott a Duna Budapestnél centiméterben mért vízállása 2024. január 1 és 
 
 Elvárt kimenet:
 
-````js
+```js
 [
-    [{"water_level": 199, "warning": "green"}, {"water_level": 876, "warning":  "red"}/*, ...*/],
-    [/*...*/]
-    // .
-    // .
-    // .
-]
+  [
+    { water_level: 199, warning: "green" },
+    { water_level: 876, warning: "red" } /*, ...*/,
+  ],
+  [
+    /*...*/
+  ],
+  // .
+  // .
+  // .
+];
 ```
 
 A tömbök tömbjében vett objektum tehát az alábbi formát öltse (a property-k nevére figyelj!!):
@@ -35,4 +40,4 @@ A tömbök tömbjében vett objektum tehát az alábbi formát öltse (a propert
 "water_level": number,
 "warning": "green" | "orange" | "red"
 }
-````
+```
