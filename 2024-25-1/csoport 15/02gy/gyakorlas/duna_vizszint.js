@@ -1,4 +1,4 @@
-
+// Feladatleírás: https://github.com/Redzo7/web-programming/tree/main/2024-25-1/csoport%2015/02gy/gyakorlas
 
 // A Duna vízállása Budapestnél cm-ben, 2024. január 1 és 2024. szeptember 16 között.
 const water_level = [
