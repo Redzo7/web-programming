@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duna vízszintje</title>
+</head>
+<body>
+    <div>
+        <h1>A Duna vízállásainak minimuma, maximuma, átlaga hónaponként.</h1>
+        <table border="1">
+            <thead id="avg_header"></thead>
+            <tbody id="avg_body"></tbody>
+        </table>
+    </div>
+    <hr/>
+    <div>
+        <h1>Az éves minimum, maximum és átlag vízmagasság.</h1>
+        <p>Minimum: <span id="year_min"></span> cm</p>
+        <p>Maximum: <span id="year_max"></span> cm</p>
+        <p>Átlag: <span id="year_avg"></span> cm</p>
+    </div>
+    <hr>
+    <div>
+        <h1>Vízállások adott érték fölött</h1>
+
+        <h2>Azok a hónapok, ahol minden mérés eredménye 230cm fölötti</h2>
+        <p id="above_230"></p>
+
+        <h2>Azok a hónapok, ahol minden mérés eredménye a beviteli mező értéke fölötti</h2>
+        <input type="number" id="boundary"><br>
+        <input type="button" value="Kalkuláció" id="aboveAllBtn">
+        <p id="above_input"></p>
+    </div>
+    <hr>
+    <table id="classification" border="1">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+</body>
+<script src="duna_vizszint.js"></script>
+<script src="utils.js"></script>
+</html>
