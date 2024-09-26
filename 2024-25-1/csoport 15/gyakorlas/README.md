@@ -41,3 +41,10 @@ A tömbök tömbjében vett objektum tehát az alábbi formát öltse (a propert
 "warning": "green" | "orange" | "red"
 }
 ```
+
+6. a) Bármelyik átlagra kattintás után jelöljük azt ki. A cellának a háttere legyen sötétzöld, a betűszíne pedig világoszöld.
+   b) érjük el, hogy a táblázatban csak az átlag sorra vonatkozzon a kijelölés, a minimum vagy maximum értékekre kattintva ne történjen semmi! (hint: mit is vár a delegate függvény?)
+7. Csak egy értéket választhassunk ki.
+8. A kiválasztott érték után szúrjunk be egy "💧" emojit a szám elejére. (pl: 💧345.564 - mindez sötétzöld háttérrel és világoszöld betűszínnel)
+9. Amikor kiválasztunk egy elemet, a táblázat alatt, egy új táblázatban jelenjenek meg az adott hónap alapértékei. (amikből az átlagot képeztük) (hint: dataset)
+   (pl: ha rákattintunk az átlagok közül balról a 2-ra (februári átlag), jelenjen meg egy új táblázat az eredeti alatt, ami a február havi napi vízállásokat tartalmazza)
