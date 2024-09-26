@@ -1,0 +1,25 @@
+.selectedRow {
+    background-color: green;
+    color: lightgreen;
+}
+
+#chessBoard {
+    border: 1px solid black;
+}
+
+#chessBoard td {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+.blackBg {
+    background-color: black;
+}
+#water_level {
+    border: 1px solid black;
+}
+
+#water_level td {
+    border: 1px solid black;
+}
