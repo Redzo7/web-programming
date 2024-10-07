@@ -17,8 +17,8 @@ function makeColor(event, element){
     element.style.backgroundColor = 'red';
     console.log(`Row: ${element.dataset.rowIndex}, Col: ${element.dataset.colIndex}`)
 
-    // let nextToTD = table.querySelectorAll(`td[data-rowIndex="${element.dataset.rowIndex}"][data-colIndex="${element.dataset.colIndex+1}"]`)
-    // console.log(nextToTD);
+    let nextToTD = table.querySelector(`td[data-rowIndex="${element.dataset.rowIndex}"][data-colIndex="${element.dataset.colIndex}"]`)
+    console.log(nextToTD);
     // nextToTD.style.backgroundColor = 'red'
 
 

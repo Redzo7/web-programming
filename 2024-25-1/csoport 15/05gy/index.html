@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyorsírás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="startNav">Start game</li>
+            <li id="statsNav">Statistics</li>
+            <li id="promptNav">Add prompt</li>
+        </ul>
+    </nav>
+    <main>
+        <div id="gameContainer">
+            <div id="init">
+                <input type="text" name="username" id="username">
+                <input type="button" value="Start game" id="startButton">
+            </div>
+            <div id="game">
+                <div id="targetText"></div>
+                <textarea id="inputTextarea"></textarea>
+            </div>
+            <div id="timer">
+
+            </div>
+        </div>
+        <div id="statsContainer">
+            <table></table>
+        </div>
+        <div id="promptContainer">Prompt</div>
+    </main>
+</body>
+<script src="scripts.js"></script>
+</html>

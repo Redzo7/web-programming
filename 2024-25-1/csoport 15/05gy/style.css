@@ -1,0 +1,39 @@
+body, nav, ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav, ul {
+    background-color: #636363;
+}
+
+nav li {
+    display: inline-block;
+    background-color: #636363;
+    color: white;
+    font-weight: bold;
+    width: 33%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li:hover {
+    background-color: #959595;
+}
+
+textarea {
+    width: 100%;
+    height: 250px;
+}
+
+.correct {
+    background-color: darkgreen;
+    color: lightgreen;
+}
+
+.incorrect {
+    background-color: darkred;
+    color: pink;
+}
