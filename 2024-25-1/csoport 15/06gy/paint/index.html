@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <style>
+        td{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        td[data-color="blue"] {
+            background-color: blue;
+        }
+        td[data-color="green"] {
+            background-color: green;
+        }
+        td[data-color="red"] {
+            background-color: red;
+        }
+        td[data-color="black"] {
+            background-color: black;
+        }
+        canvas {
+            margin-top: 15px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td data-color="blue"></td>
+            <td data-color="green"></td>
+            <td data-color="red"></td>
+            <td data-color="black"></td>
+        </tr>
+    </table>
+
+    <canvas width="700" height="700"></canvas>
+</body>
+<script src="script.js"></script>
+</html>
