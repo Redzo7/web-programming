@@ -1,0 +1,30 @@
+.error {
+    color: red;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+nav ul li:hover {
+    background-color: beige;
+}
