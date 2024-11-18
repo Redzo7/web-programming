@@ -1,0 +1,9 @@
+[
+    {
+        "id": 0,
+        "username": "Próba Pali",
+        "password": "test123",
+        "isAdmin": true,
+        "age": 20
+    }
+]
