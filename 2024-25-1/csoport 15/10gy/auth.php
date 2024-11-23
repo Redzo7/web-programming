@@ -1,9 +1,8 @@
-<?php
+<?php 
     if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 
-    include_once "pages/songs.php";
     include_once "pages/navbar.php";
-    include_once "misc/error_functions.php";
+    include_once "pages/auth_components.php";
 ?>
 
 <!DOCTYPE html>
@@ -11,25 +10,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenekereső</title>
+    <title>Authentication</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?= NavBar(); ?>
 
-    <!-- zene lista... -->
-    <?= songs_page() ?>
-
-    <?php 
-    
-    /*
-    <?= $age ?>
-    ugyanaz
-    <?php echo $age ?>
-
-    $age = int
-    */
-
-    ?>
+    <?= isset($_GET["login"]) ? login() : register() ?> 
 </body>
 </html>

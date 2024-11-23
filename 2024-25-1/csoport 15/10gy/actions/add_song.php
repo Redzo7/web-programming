@@ -79,7 +79,10 @@ if( $error_count <= 0)
     save_record("data/songs.json", $new_song);
 
     // Reset mentett értékeket
-    $_SESSION["invalues"] = [];
+    // $_SESSION["invalues"] = [];
+
+    // helyettesíthetjük:
+    unset($_SESSION["invalues"]);
 }
 
 redirect("../index.php");

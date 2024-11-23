@@ -25,6 +25,8 @@ nav ul {
 nav ul li {
     user-select: none;
     float: left;
+
+    color:white
 }
 nav ul #nav_right {
     float: right;
@@ -40,4 +42,8 @@ nav ul li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+.admin {
+    color: red;
 }

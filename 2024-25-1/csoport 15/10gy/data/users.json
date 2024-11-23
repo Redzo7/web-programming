@@ -5,5 +5,12 @@
         "password": "test123",
         "isAdmin": true,
         "age": 20
+    },
+    {
+        "id": 1,
+        "username": "redzo",
+        "password": "almafa",
+        "isAdmin": true,
+        "age": 22
     }
 ]
