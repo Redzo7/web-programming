@@ -4,6 +4,13 @@ November végével egyre többet szól az All I want for christmas című szám 
 Segítségül hívta legügyesebb Krampuszait, Diddy-t, Kolibrit, Tuttifruttit és Thomas O'Pamacskát.
 A krampuszokkal közösen kezdték el összegyűjteni és elkészíteni a különböző ajándékokat, viszont az előrehaladásukról szeretnének egy webes megjelenítőt készíteni, ami a te feladatod lesz.
 
+## Rövid leírás
+
+A feladatot PHP-ban kell megoldani.
+A feladat egyszerűsége miatt elég 1 fájlban dolgoznod (+ az adattároló fájl), viszont, ha jobban átlátod, úgy nyugodtan válaszd szét a kódod.
+Ha valahol nem tudsz továbbhaladni, mivel nem tudtál megoldani egy részfeladatot, vedd fel az értékét egy változóba és dolgozz azzal. Ezesetben kérlek ezt kommentben jelezd felém is.
+Ha bármilyen kérdésed van, megakadtál, hibát találsz a feladatban jelezd felém Teamsen!
+
 ## Kiindulás
 
 ```php
@@ -49,12 +56,12 @@ A krampuszokkal közösen kezdték el összegyűjteni és elkészíteni a külö
 
 1.  a) Sajnos Rudolf, a rénszarvas lebetegedett, így a beszerzési folyamat ideje jelentősen megnövekedett, hiszen így Télapónak a GLS-re kell hagyatkoznia a szállításban. Írd ki a weboldalra, hogy melyik az a termék, amire különös figyelmet kell fordítani, azaz, amiből még a legtöbb darabot kell beszerezni. (1 pont)
 
-b) Melyek azok a termékek, melyekből már raktáron van a szükséges mennyiség? Írd ki az előző alá. (1 pont)
+b) Hány olyan termék van, melyből már raktáron van a szükséges mennyiség? Írd ki az előző alá. (1 pont)
 
-2. Az ajándékok nem csak a gyerekek számára kiemelten fontosak, vannak olyan ajándékok, mellyel a Krampuszok is előszeretettel foglalkoznak. Sajnos Kolibri az elmúlt időszakban nem dolgozott olyan produktívan, mint a többiek, így Télapó szeretné látni, hogy Kolibri mely ajándékok beszerzésével foglalkozott.
+2. Az ajándékok nem csak a gyerekek számára kiemelten fontosak, vannak olyan ajándékok, mellyel a Krampuszok is szívesebben foglalkoznak. Sajnos Kolibri az elmúlt időszakban nem dolgozott olyan produktívan, mint a többiek, így Télapó szeretné látni, hogy Kolibri mely ajándékok beszerzésével foglalkozott.
 
 a) Jelenítsd meg egy számozatlan listában az összes ajándékot, mögötte zárójelben a beszerzett/szükséges mennyiségeket. (2 pont)
-b) Az összes olyan ajándék, melynek folyamataiban Kolibri részt vett, legyen zöld (1 pont)
+b) Az összes olyan ajándék, melynek folyamataiban Kolibri részt vett, legyen zöld betűszínű (1 pont)
 
 3. Télapó a gyermekek által összeállított listából szeretne tapasztalatokat levonni, szeretné látni a legnépszerűbb ajándékokat.
 
