@@ -65,9 +65,9 @@ b) Flamo nagyon sunyin viselkedett, és többször látták Bu tábornokkal egy 
 
 # Szűrés (4 pont)
 
-a) Helyezz egy űrlapot az oldalra, ami tartalmaz egy szöveges beviteli mezőt, valamint egy submit gombot. Az űrlap beküldése esetén a beviteli mezőbe írt értéket írd ki az űrlap alá. (1 pont)
-b) Ha nem egész számot ad meg a szöveges mezőbe a felhasználó, akkor azt jelezd hibaüzenettel (1 pont)
-c) Ha egész számot ad meg a szöveges mezőbe a felhasználó, akkor jelenítsd meg egy számozatlan listában azokat a helyszíneket, melyeknél eredetileg legalább annyi aranyrög volt megtalálható. (1 pont)
+a) Helyezz egy űrlapot az oldalra, ami tartalmaz egy szöveges beviteli mezőt, valamint egy submit gombot. Az űrlap beküldése esetén a beviteli mezőbe írt értéket írd ki az űrlap alá. (1 pont)\
+b) Ha nem egész számot ad meg a szöveges mezőbe a felhasználó, akkor azt jelezd hibaüzenettel (1 pont)\
+c) Ha egész számot ad meg a szöveges mezőbe a felhasználó, akkor jelenítsd meg egy számozatlan listában azokat a helyszíneket, melyeknél eredetileg legalább annyi aranyrög volt megtalálható. (1 pont)\
 d) Érd el, hogy első betöltéskor nem jelenik meg hibaüzenet, vagy figyelmeztetés (1 pont)
 
 # Perzisztens adattárolás (2 pont)
