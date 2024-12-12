@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX basics</title>
+
+</head>
+<body>
+    Key:
+    <input type="text" name="text" id="text_input"><br>
+    <button id="btn">Send key</button>
+    <p id="text_field"></p>
+    <script>
+        const inputData = document.querySelector('#text_input').value;
+        const text_field = document.querySelector('#text_field');
+        const btn = document.querySelector('#btn');
+        // mi a különbség a szinkron és aszinkron műveletek közt?
+        // nézzük meg:
+        // szinkron
+        // aszinkron (pl event handlerek, timer, PROMISE)
+
+        // Promise: 
+        const delay = (ms) => new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log('waited: ' + ms);
+                resolve(ms);
+            }, ms);
+        });
+
+        // Függvényei: error, then
+        /* Állapotai:
+        
+        pending -- result is undefined
+        fulfilled -- result is a result value
+        rejected -- result is error obj
+        
+        */
+
+        delay(1000).then(() => console.log('lmao'));
+        delay(2000).then(() => console.log('masodik'));
+
+
+        
+        btn.addEventListener('click', async (e) => {
+            const response = await fetch(`base_ajax.php?key=age`);
+            const answer = await response.json();
+
+            text_field.innerText = answer.value || 'default...';
+        })
+    </script>
+</body>
+</html>

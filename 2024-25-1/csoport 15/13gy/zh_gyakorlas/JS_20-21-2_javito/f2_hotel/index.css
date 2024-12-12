@@ -1,0 +1,27 @@
+@import url("https://cdn.jsdelivr.net/gh/elte-fi/www-assets@19.10.16/styles/mdss.min.css");
+
+label {
+    display: inline-block;
+    width: 180px;
+}
+
+table td {
+    border: 1px solid gray;
+}
+
+#free {
+    color: #517d81;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.free {
+    background-color: lightgreen;
+    color: black;
+}
+
+.taken {
+    background-color: red;
+    color: white;
+}
+

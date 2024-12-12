@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX alapok</title>
+</head>
+<body>
+    Key:
+    <input type="text" id="key_input">
+    <button id="btn">Get value</button>
+    <p id="result"></p>
+
+
+    <script>
+        // szinkron
+        /*
+        console.log('első');
+        console.log('második');
+        console.log('harmadik');
+        */
+        // aszinkrotitás
+        /*
+        console.log('negyedik');
+        setTimeout(() => {
+            console.log('ötödik');
+        }, 1000)
+        console.log('hatodik');
+        */
+        // Promise
+        const delay = (ms) => new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('waited ', ms);
+                    resolve({estimated: ms});
+            }, ms)
+        });
+
+        // state
+        // rejected -- result is error obj
+        // resolved -- result is a value
+        // pending  -- result is undefined
+
+        // Functions
+        // then
+        // error
+        /*
+        delay(1000)
+            .then((res) => {
+                console.log(res)
+                console.log('lefutottam én is')
+            }).then( () => {
+                console.log('még egyszer lefutott');
+            }).catch((err) => {
+                console.log(err);
+            });
+        */
+       /*
+        const test_await = async () => {
+            await delay(1000);
+            console.log('én is itt vagyok');
+        };
+
+        test_await(); // await csak async függvényben
+        */
+
+        const button = document.querySelector('#btn');
+        const input_field = document.querySelector('#key_input');
+        const p = document.querySelector('#result');
+
+        button.addEventListener('click', ajax_call);
+
+       async function ajax_call() {
+        const value = input_field.value;
+        /*
+        const response = await fetch(`base_ajax.php?key=${value}`);
+        const data = await response.json();
+        */
+        let fetched = '';
+        fetch(`base_ajax.php?key=${value}`).then((res) => {
+            return res.json();
+        }).then((data) => {
+            console.log(data);
+            fetched = data;
+            p.innerText = fetched['result'];
+        }).catch((err) => {
+            console.log(err)
+            p.innerText = 'error';
+        });
+
+        
+       }
+    </script>
+</body>
+</html>

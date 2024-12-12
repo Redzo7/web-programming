@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontaktlista</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Kontaktlista</h1>
+
+  Névszűrő: <input type="text" id="name-filter">
+
+  <div id="contacts">
+    <section>
+      <p class="name">Akkord Aladár</p>
+      <p class="email" hidden>alma@pelda.hu</p>
+      <p class="address" hidden>1234 Andornaktálya, Hosszú utca 10.</p>
+      <p class="phone" hidden>+36-70-1234567</p>
+      <p>
+        <button data-toggle="email">Email</button>
+        <button data-toggle="address">Cím</button>
+        <button data-toggle="phone">Telefon</button>
+      </p>
+    </section>
+    <section>
+      <p class="name">Barna Barnabás</p>
+      <p class="email" hidden>barnabas@pelda.hu</p>
+      <p class="address" hidden>1111 Budapest, Béla tér 20.</p>
+      <p class="phone" hidden>+36-70-1234765</p>
+      <p>
+        <button data-toggle="email">Email</button>
+        <button data-toggle="address">Cím</button>
+        <button data-toggle="phone">Telefon</button>
+      </p>
+    </section>
+    <section>
+      <p class="name">Cuki Cecília</p>
+      <p class="email" hidden>cecil@pelda.hu</p>
+      <p class="address" hidden>1432 Cák, Pince sor 3.</p>
+      <p class="phone" hidden>+36-70-7654321</p>
+      <p>
+        <button data-toggle="email">Email</button>
+        <button data-toggle="address">Cím</button>
+        <button data-toggle="phone">Telefon</button>
+      </p>
+    </section>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

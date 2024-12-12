@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Hotelszobák</title>
+</head>
+<body>
+    <h1>Hotelszobák</h1>
+    
+    <label for="floors">Emeletek száma:</label>
+    <input id="floors" type="number" min="1" step="1" max="9" value="5"><br>
+
+    <label for="rooms">Szobák emeletenként:</label>
+    <input id="rooms" type="number" min="1" step="1" max="20" value="8"><br>
+
+    <button type="submit">Foglalás</button>
+
+    <h2>Táblázat</h2>
+    <table></table>
+
+    <h2>Lista</h2>
+    Szabad szobák összesen: <span id="free">0</span> db
+    <ul></ul>
+
+    <script src="index.js"></script>
+</body>
+</html>
