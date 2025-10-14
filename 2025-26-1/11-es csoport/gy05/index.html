@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connections</title>
+    <style>
+        div {
+            width: 100%;
+        }
+
+        input {
+            margin: auto;
+            text-align: center;
+            padding: 10px 15px;
+            background-color: lightblue;
+            color: darkblue;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .game_word {
+            display: inline;
+            border: 1px solid lightgray;
+            border-radius: 15px;
+            background-color: lightgray;
+            padding: 10px 15px;
+            margin: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 25%;
+        }
+
+        .game_row {
+            margin-top: 30px;
+            width: 75%;
+            user-select: none;
+        }
+
+        .selected {
+            background-color: green;
+        }
+
+        .guessed {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .category_name {
+            margin-right: 5px;
+            font-weight: bold;
+            color: darkblue;
+            background-color: aqua;
+        }
+
+        #time {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main_page">
+        <label for="name">Username</label>
+        <input type="text" name="name" value="Anonymous" id="name">
+        <br>
+        <input type="button" value="Start game" id="start">
+    </div>
+    <div id="game_page">
+        <div id="lives"></div>
+        <input type="button" value="Back to main menu" id="back">
+        <input type="button" value="Shuffle" id="shuffle">
+        <input type="button" value="Deselect all" id="deselect" >
+        <input type="button" value="Submit" id="submit">
+        <div id="words"></div>
+        <div id="time">Time: <span id="timer"></span></div>
+        <br>
+        <h1>Categories</h1>
+        <div id="guessed"></div>
+    </div>
+    <div id="results_page">Results</div>
+
+    <script type="module" src="navigation.js"></script>
+    <script type="module" src="utils.js"></script>
+    <script type="module" src="data.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
