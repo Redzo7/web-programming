@@ -1,16 +1,19 @@
 import { displayPage, init_navigation } from "./navigation.js";
 import { data } from "./data.js";
-import { delegate, generate_grid, update_lives, add_guessed, update_time } from "./utils.js";
+import { delegate, generate_grid, update_lives, add_guessed, update_time, clearWords } from "./utils.js";
 
 // Pages
 const main_page = document.querySelector("div#main_page");
 const game_page = document.querySelector("div#game_page");
+const results_page = document.querySelector("div#results_page");
 
 // Components
 const shuffle_button = document.querySelector("#game_page #shuffle");
 const deselect = document.querySelector("#game_page #deselect");
 const submit = document.querySelector("#game_page #submit");
 const name_input = document.querySelector("#main_page #name");
+const start_button = document.querySelector("#main_page #start");
+const scoretable = document.querySelector("#results_page table");
 
 // Initialize
 displayPage(main_page);
@@ -18,18 +21,31 @@ init_navigation();
 let game_index = 0;
 let selected_ids = [];
 let guessed_categories = [];
-let scoreboard = [];
+let scoreboard = JSON.parse(localStorage.getItem("scores")) ?? [];
 let seconds = 0;
 
 let lives = 4;
 update_lives(lives);
 // setTimeout -- késleltetés
 // setInterval -- függvényt ismételt futtatása ("timer")
-const timer = setInterval(() => {
+let timer = setInterval(() => {
     seconds++;
     update_time(seconds);
 }, 1000);
 
+start_button.addEventListener("click", () => { 
+    lives = 4;
+    update_lives();
+
+    selected_ids = [];
+    guessed_categories = [];
+
+    clearInterval(timer);
+    seconds = 0;
+
+    clearWords();
+    start(); 
+})
 
 generate_grid( data[game_index] );
 
@@ -97,10 +113,15 @@ submit.addEventListener("click", (event, elem) => {
             finalize_game();
         }
     }
-    else
+    else // Lost game
     {
         lives = lives-1;
         update_lives(lives);
+
+        if(lives == 0)
+        {
+            restart();
+        }
     }
 })
 
@@ -125,6 +146,71 @@ function finalize_game()
             game_id: game_index
         }
     )
+
+
+    localStorage.setItem("scores", JSON.stringify(scoreboard));
+    /*
+    localStorage.setItem();
+    localStorage.getItem();
+    localStorage.clear();
+
+    JSON.stringify();
+    JSON.parse();
+    */
+
+    displayPage(results_page);
+    generate_scoreboard();
+}
+
+function restart()
+{
+    lives = 4;
+    update_lives();
+
+    selected_ids = [];
+    guessed_categories = [];
+
+    clearInterval(timer);
+    seconds = 0;
+
+    clearWords();
+    displayPage(main_page);
+}
+
+function start()
+{
+    game_index = Math.floor(Math.random()* data.length );
+    generate_grid( data[game_index] );
+
+    timer = setInterval(() => {
+        seconds++;
+        update_time(seconds);
+    }, 1000);
+
+}
+
+function generate_scoreboard()
+{
+    scoretable.innerHTML = '';
+
+    scoreboard.forEach((elem) => {
+        const tr = document.createElement("tr");
+
+        const name = document.createElement("td");
+        const time = document.createElement("td");
+        const game_id = document.createElement("td");
+
+        name.innerText = elem.name;
+        time.innerText = elem.time;
+        game_id.innerText = elem.game_id;
+
+        tr.appendChild(name);
+        tr.appendChild(time);
+        tr.appendChild(game_id);
+
+        scoretable.appendChild(tr);
+    })
+
 }
 
 // TODO: after guessing category, shuffle allows reselect
